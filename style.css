@@ -1,0 +1,343 @@
+:root {
+    /* Design System: Warna */
+    --color-dark-green: #0F6E56;
+    --color-medium-green: #1D9E75;
+    --color-white: #FFFFFF;
+    --color-action-green: #1A772A;
+    --color-light-gray: #DADADA;
+    --color-black: #000000;
+    --color-red: #FF3B30;
+
+    /* Design System: Typography */
+    --font-h1: 40px;
+    --font-h2: 30px;
+    --font-h3: 25px;
+    --font-h4: 18px;
+    --font-body-large: 16px;
+    --font-body-medium: 15px;
+    --font-caption: 14px;
+}
+
+/* Typography Utility Classes */
+.text-h1 {
+    font-size: var(--font-h1);
+}
+
+.text-h2 {
+    font-size: var(--font-h2);
+}
+
+.text-h3 {
+    font-size: var(--font-h3);
+}
+
+.text-h4 {
+    font-size: var(--font-h4);
+}
+
+.text-body-large {
+    font-size: var(--font-body-large);
+}
+
+.text-body-medium {
+    font-size: var(--font-body-medium);
+}
+
+.text-caption {
+    font-size: var(--font-caption);
+}
+
+/* Font Weight Utilities */
+.font-regular {
+    font-weight: 400;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Body untuk meletakkan tampilan aplikasi di tengah layar */
+body {
+    background-color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container utama untuk frame aplikasi (ukuran: 412x917) */
+.app-container {
+    width: 412px;
+    height: 917px;
+    background-color: var(--color-white);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    /* Efek shadow untuk menonjolkan frame */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Sembunyikan scrollbar bawaan browser agar terlihat seperti aplikasi asli */
+.app-container::-webkit-scrollbar,
+.main-content::-webkit-scrollbar {
+    display: none;
+}
+
+.app-container,
+.main-content {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* --- Bagian Header --- */
+.header-section {
+    background-color: var(--color-dark-green);
+    color: var(--color-white);
+    padding: 40px 20px 30px 20px;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+    z-index: 10;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.greeting p {
+    margin-bottom: 4px;
+}
+
+.settings-icon i {
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* --- Kartu Saldo --- */
+.balance-card {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.0));
+}
+
+.balance-info p {
+    margin-bottom: 8px;
+}
+
+.balance-amount-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.balance-amount-row i {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.daily-increase {
+    margin-bottom: 25px !important;
+}
+
+.card-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-outline {
+    flex: 1;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: var(--color-white);
+    padding: 12px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-outline:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* --- Konten Utama --- */
+.main-content {
+    flex: 1;
+    padding: 25px 20px;
+    overflow-y: auto;
+}
+
+/* Global styling untuk judul section */
+h3 {
+    color: var(--color-black);
+    margin-bottom: 15px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #EBEBEB;
+}
+
+/* --- Banner Aksi Cepat --- */
+.quick-action {
+    margin-bottom: 30px;
+}
+
+.banner {
+    width: 100%;
+    height: 150px;
+    background-color: #8D8D8D;
+    border-radius: 40px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+/* Gambar mesin dalam banner */
+.banner-machine-image {
+    position: absolute;
+    border-radius: 40px;
+
+    left: 25px;
+    bottom: -15px;
+    height: 120%;
+    width: auto;
+    max-width: 45%;
+    object-fit: contain;
+    z-index: 1;
+}
+
+.banner-content {
+    position: absolute;
+    right: 30px;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+}
+
+.banner-text {
+    text-align: center;
+    color: var(--color-white);
+}
+
+.banner-text p {
+    margin-bottom: 12px;
+}
+
+.btn-action-green {
+    background-color: var(--color-action-green);
+    color: var(--color-white);
+    border: none;
+    padding: 10px 35px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* --- Daftar Riwayat --- */
+.history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.history-item {
+    display: flex;
+    align-items: center;
+    padding: 18px 16px;
+    border: 1px solid var(--color-light-gray);
+    border-radius: 12px;
+    background-color: var(--color-white);
+}
+
+.history-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 16px;
+    font-size: 20px;
+}
+
+/* Warna latar belakang icon */
+.bg-light-green {
+    background-color: #E6F3F0;
+    /* Versi transparan dari dark green */
+}
+
+.bg-light-red {
+    background-color: #FFECEB;
+    /* Versi transparan dari merah */
+}
+
+.history-details {
+    flex: 1;
+}
+
+.history-details h4 {
+    color: var(--color-black);
+    margin-bottom: 5px;
+}
+
+.history-details p {
+    color: #888888;
+}
+
+/* Warna text untuk nominal angka */
+.text-green {
+    color: var(--color-dark-green);
+}
+
+.text-red {
+    color: var(--color-red);
+}
+
+/* --- Navigation Bar (Navbar) --- */
+.bottom-nav {
+    width: 100%;
+    height: 75px;
+    background-color: var(--color-light-gray);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid #CCC;
+    flex-shrink: 0;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color-black);
+    cursor: pointer;
+    transition: color 0.2s;
+    text-decoration: none;
+}
+
+.nav-item i {
+    font-size: 22px;
+    margin-bottom: 6px;
+}
+
+/* State ketika nav item aktif */
+.nav-item.active {
+    color: var(--color-medium-green);
+}

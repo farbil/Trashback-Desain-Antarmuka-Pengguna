@@ -1,0 +1,186 @@
+:root {
+  --green-dark:   #0F6E56;   /* warna 1: judul, subtitle, tombol bg */
+  --green-mid:    #0d5e49;   /* button hover (sedikit lebih gelap)   */
+  --green-light:  #b2d4c8;   /* blob dekoratif                       */
+  --green-accent: #46D3D3;   /* warna 5: "Yuk Masuk / Yuk Daftar"   */
+  --bg:           #ffffff;
+  --text-main:    #000000;   /* warna 3: label input, teks biasa     */
+  --text-sub:     #0F6E56;   /* warna 1: subtitle                    */
+  --input-bg:     #DADADA;   /* warna 2: kolom email & password      */
+  --input-border: transparent;
+  --input-focus:  #0F6E56;
+  --btn-text:     #FFFFFF;   /* warna 4: teks di dalam tombol        */
+  --error:        #d94f4f;
+  --radius-card:  24px;
+  --radius-input: 14px;
+  --radius-btn:   14px;
+}
+
+/* ---------- Reset & Base ---------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  height: 100%;
+  font-family: 'Nunito', sans-serif;
+  background: var(--bg);
+  color: var(--text-main);
+  overflow: hidden;          /* prevent scroll on mobile-ish viewport */
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* ---------- Decorative Blobs ---------- */
+.blob {
+  position: fixed;
+  border-radius: 50%;
+  background: var(--green-light);
+  opacity: 0.55;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* --- Daftar page blobs (top-left cluster + bottom-right) --- */
+.page-daftar .blob-tl-1 { width: 90px;  height: 90px;  top: 6%;   left: -30px; }
+.page-daftar .blob-tl-2 { width: 58px;  height: 58px;  top: 16%;  left: 12px;  }
+.page-daftar .blob-br-1 { width: 130px; height: 130px; bottom: 2%;  right: -40px; }
+.page-daftar .blob-br-2 { width: 75px;  height: 75px;  bottom: 17%; right: 10px;  }
+
+/* --- Masuk page blobs (top-right + bottom-left cluster) --- */
+.page-masuk .blob-tr-1  { width: 110px; height: 110px; top: 8%;   right: -30px; }
+.page-masuk .blob-bl-1  { width: 90px;  height: 90px;  bottom: 8%; left: -28px; }
+.page-masuk .blob-bl-2  { width: 58px;  height: 58px;  bottom: 20%; left: 14px; }
+
+/* ---------- Card ---------- */
+.card {
+  position: relative;
+  z-index: 1;
+  width: min(360px, 92vw);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  animation: fadeUp 0.5s ease both;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+/* ---------- Typography ---------- */
+.title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--green-dark);
+  letter-spacing: -0.5px;
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 0.97rem;
+  font-weight: 600;
+  color: var(--text-sub);
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 38px;
+}
+
+/* ---------- Form ---------- */
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  background: var(--input-bg);
+  border-radius: var(--radius-input);
+  padding: 14px 18px;
+  border: 2px solid var(--input-border);
+  transition: border-color 0.2s;
+}
+
+.input-group:focus-within {
+  border-color: var(--input-focus);
+}
+
+.input-label {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--text-main);
+  white-space: nowrap;
+  margin-right: 6px;
+}
+
+.input-group input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.92rem;
+  color: var(--text-main);
+}
+
+.input-group input::placeholder {
+  color: #aab8b3;
+  letter-spacing: 1px;
+}
+
+/* ---------- Error ---------- */
+.error-msg {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--error);
+  text-align: center;
+  min-height: 1.1em;
+  margin-top: -4px;
+}
+
+/* ---------- Button ---------- */
+.btn-primary {
+  width: 100%;
+  padding: 16px;
+  background: var(--green-dark);
+  color: var(--btn-text);
+  border: none;
+  border-radius: var(--radius-btn);
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  margin-top: 6px;
+}
+
+.btn-primary:hover  { background: var(--green-mid); }
+.btn-primary:active { transform: scale(0.97); }
+
+/* ---------- Switch Auth ---------- */
+.switch-auth {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-top: 22px;
+  text-align: center;
+}
+
+.link-accent {
+  color: var(--green-accent);
+  text-decoration: none;
+  font-weight: 800;
+  transition: opacity 0.15s;
+}
+
+.link-accent:hover { opacity: 0.75; text-decoration: underline; }

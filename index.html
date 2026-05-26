@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=412, height=917, initial-scale=1.0">
+    <title>Trashback - Home Screen</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Container utama ukuran 412x917 (mobile) -->
+    <div class="app-container">
+
+        <!-- Bagian Header (Warna latar belakang hijau tua #0F6E56) -->
+        <header class="header-section">
+            <div class="header-top">
+                <div class="greeting">
+                    <!-- Teks ucapan selamat pagi -->
+                    <p class="text-body-large font-regular">Selamat pagi,</p>
+                    <!-- Nama Pengguna -->
+                    <h1 class="text-h2 font-bold">Alif Ba Ta!</h1>
+                </div>
+                <!-- Ikon Pengaturan (Gear) -->
+                <div class="settings-icon">
+                    <i class="fa-solid fa-gear"></i>
+                </div>
+            </div>
+
+            <!-- Kartu Saldo (Card) di dalam header -->
+            <div class="balance-card">
+                <div class="balance-info">
+                    <p class="text-caption font-semibold">Total saldo TrashBack</p>
+                    <div class="balance-amount-row">
+                        <!-- Jumlah saldo -->
+                        <h2 class="text-h1 font-bold">Rp. 50.000</h2>
+                        <!-- Ikon mata untuk melihat/menyembunyikan saldo -->
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <!-- Keterangan tambahan saldo hari ini -->
+                    <p class="daily-increase text-caption font-regular"><strong class="font-bold">+Rp. 5000</strong>
+                        hari ini</p>
+                </div>
+
+                <!-- Tombol aksi pada kartu saldo -->
+                <div class="card-actions">
+                    <button class="btn-outline text-caption font-semibold">Tarik Saldo</button>
+                    <button class="btn-outline text-caption font-semibold">Riwayat</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Bagian Konten Utama (Warna latar putih #FFFFFF) -->
+        <main class="main-content">
+
+            <!-- Bagian Aksi Cepat -->
+            <section class="quick-action">
+                <!-- Judul bagian dengan garis bawah -->
+                <h3 class="text-h4 font-bold">Aksi cepat</h3>
+                <!-- Banner aksi cepat dengan gambar/gradien latar belakang -->
+                <div class="banner">
+                    <!-- Gambar mesin sampah -->
+                    <img src="img/mesin-sampah.jpeg" alt="Mesin TrashBack" class="banner-machine-image">
+                    <div class="banner-content">
+                        <div class="banner-text">
+                            <p class="text-caption font-bold">Lihat Karya Kami</p>
+                            <!-- Tombol dengan warna hijau lain #1A772A -->
+                            <button class="btn-action-green text-caption font-semibold">Ayo!</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bagian Riwayat Terbaru -->
+            <section class="recent-history">
+                <!-- Judul bagian dengan garis bawah -->
+                <h3 class="text-h4 font-bold">Riwayat terbaru</h3>
+
+                <div class="history-list">
+                    <!-- Item Riwayat 1 (Pemasukan) -->
+                    <div class="history-item">
+                        <!-- Ikon riwayat dengan latar hijau muda transparan -->
+                        <div class="history-icon bg-light-green">
+                            <i class="fa-solid fa-bottle-water" style="color: #0F6E56;"></i>
+                        </div>
+                        <div class="history-details">
+                            <h4 class="text-body-medium font-semibold">Botol Plastik - 2 buah</h4>
+                            <p class="text-caption font-regular">Hari ini, 08:45 • Mesin A</p>
+                        </div>
+                        <!-- Teks nominal positif -->
+                        <div class="history-amount text-green text-body-medium font-bold">
+                            +Rp. 10.000
+                        </div>
+                    </div>
+
+                    <!-- Item Riwayat 2 (Pengeluaran) -->
+                    <div class="history-item">
+                        <!-- Ikon riwayat dengan latar merah muda transparan -->
+                        <div class="history-icon bg-light-red">
+                            <i class="fa-solid fa-money-bill-transfer" style="color: #FF3B30;"></i>
+                        </div>
+                        <div class="history-details">
+                            <h4 class="text-body-medium font-semibold">Tarik Saldo via Dana</h4>
+                            <p class="text-caption font-regular">Hari ini, 08:45 • Berhasil</p>
+                        </div>
+                        <!-- Teks nominal negatif (merah #FF3B30) -->
+                        <div class="history-amount text-red text-body-medium font-bold">
+                            -Rp. 10.000
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Bagian Navigation Bar (Navbar) (Warna abu-abu #DADADA) -->
+        <nav class="bottom-nav">
+            <a href="pages/you.html" class="nav-item">
+                <i class="fa-solid fa-user"></i>
+                <span class="text-body-medium font-semibold">You</span>
+            </a>
+            <!-- Item navigasi yang aktif (Warna hijau #1D9E75) -->
+            <a href="index.html" class="nav-item active">
+                <i class="fa-solid fa-home"></i>
+                <span class="text-body-medium font-semibold">Home</span>
+            </a>
+            <a href="pages/karya.html" class="nav-item">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span class="text-body-medium font-semibold">Katalog</span>
+            </a>
+            <a href="pages/maps.html" class="nav-item">
+                <i class="fa-solid fa-map"></i>
+                <span class="text-body-medium font-semibold">Maps</span>
+            </a>
+        </nav>
+
+    </div>
+</body>
+
+</html>

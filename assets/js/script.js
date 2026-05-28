@@ -1,3 +1,33 @@
+// Script for daftar.html (Register)
+const daftarForm = document.getElementById('daftarForm');
+if (daftarForm) {
+  const errorMsg = document.getElementById('errorMsg');
+  daftarForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    errorMsg.textContent = '';
+
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value;
+
+    if (!email || !password) {
+      errorMsg.textContent = 'Email dan password harus diisi.';
+      return;
+    }
+
+    if (password.length < 6) {
+      errorMsg.textContent = 'Password minimal 6 karakter.';
+      return;
+    }
+
+    // Simpan akun sederhana ke localStorage lalu arahkan ke halaman masuk
+    localStorage.setItem('tb_email', email);
+    localStorage.setItem('tb_password', password);
+    localStorage.setItem('tb_registered', 'true');
+
+    window.location.href = 'masuk.html';
+  });
+}
+
 // Script for masuk.html (Login)
 const masukForm = document.getElementById('masukForm');
 if (masukForm) {
@@ -30,36 +60,6 @@ if (masukForm) {
 
     // Berhasil masuk – arahkan ke halaman utama
     alert('Selamat datang kembali, ' + email + '! 🎉');
-    window.location.href = '../index.html';
-  });
-}
-
-// Script for daftar.html (Register)
-const daftarForm = document.getElementById('daftarForm');
-if (daftarForm) {
-  const errorMsg = document.getElementById('errorMsg');
-  daftarForm.addEventListener('submit', function (e) {
-    e.preventDefault();
-    errorMsg.textContent = '';
-
-    const email = document.getElementById('email').value.trim();
-    const password = document.getElementById('password').value;
-
-    if (!email || !password) {
-      errorMsg.textContent = 'Email dan password harus diisi.';
-      return;
-    }
-
-    if (password.length < 6) {
-      errorMsg.textContent = 'Password minimal 6 karakter.';
-      return;
-    }
-
-    // Simpan akun sederhana ke localStorage lalu arahkan ke halaman masuk
-    localStorage.setItem('tb_email', email);
-    localStorage.setItem('tb_password', password);
-    localStorage.setItem('tb_registered', 'true');
-
-    window.location.href = 'masuk.html';
+    window.location.href = '../pages/home.html';
   });
 }

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trashback - Register Screen</title>
+  <link rel="stylesheet" href="../assets/css/daftar-masuk.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800" rel="stylesheet" />
+</head>
+
+<body class="page-daftar">
+
+  <!-- Hiasan gelembung hijau -->
+  <div class="blob blob-tl-1"></div>
+  <div class="blob blob-tl-2"></div>
+  <div class="blob blob-br-1"></div>
+  <div class="blob blob-br-2"></div>
+
+  <div class="card">
+    <h1 class="title">Daftar</h1>
+    <p class="subtitle">Selamat datang di Trashback!</p>
+
+    <form id="daftarForm" novalidate>
+      <div class="input-group">
+        <span class="input-label">Email:</span>
+        <input type="email" id="email" name="email" placeholder="contoh@gmail.com" autocomplete="email" required />
+      </div>
+
+      <div class="input-group">
+        <span class="input-label">Password:</span>
+        <input type="password" id="password" name="password" placeholder="••••••••••••" autocomplete="new-password"
+          required />
+      </div>
+
+      <p class="error-msg" id="errorMsg"></p>
+
+      <button type="submit" class="btn-primary">Daftar</button>
+    </form>
+
+    <p class="switch-auth">
+      Sudah punya akun?&nbsp;
+      <a href="masuk.html" class="link-accent">Yuk masuk!</a>
+    </p>
+  </div>
+
+  <script src="../assets/js/script.js"></script>
+</body>
+
+</html>

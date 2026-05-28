@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trashback - Karya Kami</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/karya.css" />
+</head>
+
+<body>
+  <div class="app-container">
+
+    <!-- HEADER -->
+    <div class="karya-header">
+      <button class="karya-back-btn" aria-label="Kembali" onclick="window.location.href='../index.html'">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+      <span class="text-h4 font-bold">Karya Kami</span>
+      <button class="karya-settings-btn" aria-label="Pengaturan">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path
+            d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+          <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- SEARCH -->
+    <div class="karya-search-wrap">
+      <div class="karya-search-box">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8" />
+          <path d="M21 21l-4.35-4.35" />
+        </svg>
+        <input class="text-body-medium font-regular" type="text" placeholder="Cari sesuatu..." />
+      </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content karya-scroll">
+      <div class="karya-grid">
+
+        <!-- Re-Pots -->
+        <div class="karya-card">
+          <div class="karya-card-img karya-img-repots">
+            <img src="../assets/img/Rectangle 9 (2).png" alt="Re-Pots" />
+          </div>
+          <div class="karya-card-body">
+            <div>
+              <span class="karya-badge text-caption font-semibold">Terlaris</span>
+              <p class="karya-card-name text-h4 font-bold">Re-Pots</p>
+              <p class="karya-card-desc text-caption font-regular">
+                Pot cantik dari botol plastik daur ulang. Ramah lingkungan, unik, dan siap percantik ruanganmu.
+              </p>
+            </div>
+            <div class="karya-card-footer">
+              <span class="karya-card-price text-body-medium font-bold">Rp 25.000</span>
+              <button class="karya-btn-buy text-caption font-semibold">Beli Sekarang!</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bloom Glassy -->
+        <div class="karya-card">
+          <div class="karya-card-img karya-img-bloom">
+            <img src="../assets/img/_ (5).jpeg" alt="Bloom Glassy" />
+          </div>
+          <div class="karya-card-body">
+            <div>
+              <span class="karya-badge text-caption font-semibold">Baru</span>
+              <p class="karya-card-name text-h4 font-bold">Bloom Glassy</p>
+              <p class="karya-card-desc text-caption font-regular">
+                Dekorasi meja cantik yang terbuat dari kaca daur ulang dengan tampilan bening menyerupai kaca.
+              </p>
+            </div>
+            <div class="karya-card-footer">
+              <span class="karya-card-price text-body-medium font-bold">Rp 35.000</span>
+              <button class="karya-btn-buy text-caption font-semibold">Beli Sekarang!</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bagry -->
+        <div class="karya-card">
+          <div class="karya-card-img karya-img-bagry">
+            <img src="../assets/img/Rectangle 9 (1).png" alt="Bagry" />
+          </div>
+          <div class="karya-card-body">
+            <div>
+              <p class="karya-card-name text-h4 font-bold">Bagry</p>
+              <p class="karya-card-desc text-caption font-regular">
+                Tas ramah lingkungan dari sampah plastik yang siap mempercantik penampilanmu dengan sederhana.
+              </p>
+            </div>
+            <div class="karya-card-footer">
+              <span class="karya-card-price text-body-medium font-bold">Rp 45.000</span>
+              <button class="karya-btn-buy text-caption font-semibold">Beli Sekarang!</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sunny Set -->
+        <div class="karya-card">
+          <div class="karya-card-img karya-img-sunny">
+            <img src="../assets/img/Rectangle 9.png" alt="Sunny Set" />
+          </div>
+          <div class="karya-card-body">
+            <div>
+              <span class="karya-badge text-caption font-semibold">Hadiah</span>
+              <p class="karya-card-name text-h4 font-bold">Sunny Set</p>
+              <p class="karya-card-desc text-caption font-regular">
+                Set dekorasi meja ceria dari bahan daur ulang. Hadirkan nuansa hangat dan penuh warna di ruanganmu
+                dengan sentuhan kreatif yang memukau.
+              </p>
+            </div>
+            <div class="karya-card-footer">
+              <span class="karya-card-price text-body-medium font-bold">Rp 60.000</span>
+              <button class="karya-btn-buy text-caption font-semibold">Beli Sekarang!</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lumira -->
+        <div class="karya-card">
+          <div class="karya-card-img karya-img-lumira">
+            <img src="../assets/img/jellyfish lamp.jpg" alt="Lumira" />
+          </div>
+          <div class="karya-card-body">
+            <div>
+              <p class="karya-card-name text-h4 font-bold">Lumira</p>
+              <p class="karya-card-desc text-caption font-regular">
+                Lahir dari botol plastik yang terlupakan, Lumira menghadirkan keajaiban laut dalam ke ruanganmu. Dengan
+                kilau yang lembut membawamu hanyut dalam ketenangan malam. 🫧
+              </p>
+            </div>
+            <div class="karya-card-footer">
+              <span class="karya-card-price text-body-medium font-bold">Rp 50.000</span>
+              <button class="karya-btn-buy text-caption font-semibold">Beli Sekarang!</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- BOTTOM NAV -->
+    <nav class="bottom-nav">
+        <a href="you.html" class="nav-item">
+            <i class="fa-solid fa-user"></i>
+            <span class="text-body-medium font-semibold">You</span>
+        </a>
+        <a href="../index.html" class="nav-item">
+            <i class="fa-solid fa-home"></i>
+            <span class="text-body-medium font-semibold">Home</span>
+        </a>
+        <a href="karya.html" class="nav-item active">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span class="text-body-medium font-semibold">Katalog</span>
+        </a>
+        <a href="maps.html" class="nav-item">
+            <i class="fa-solid fa-map"></i>
+            <span class="text-body-medium font-semibold">Maps</span>
+        </a>
+    </nav>
+
+  </div>
+</body>
+
+</html>

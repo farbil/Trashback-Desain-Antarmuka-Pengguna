@@ -30,7 +30,7 @@ if (masukForm) {
 
     // Berhasil masuk – arahkan ke halaman utama
     alert('Selamat datang kembali, ' + email + '! 🎉');
-    window.location.href = '../index.html';
+    window.location.href = '../pages/home.html';
   });
 }
 
@@ -60,6 +60,6 @@ if (daftarForm) {
     localStorage.setItem('tb_password', password);
     localStorage.setItem('tb_registered', 'true');
 
-    window.location.href = 'masuk.html';
+    window.location.href = '../index.html';
   });
 }

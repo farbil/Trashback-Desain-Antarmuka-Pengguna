@@ -2,204 +2,48 @@
 <html lang="id">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=412, height=917, initial-scale=1.0">
-    <title>Trashback - Home Screen</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trashback - Login Screen</title>
+  <link rel="stylesheet" href="assets/css/daftar-masuk.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800" rel="stylesheet" />
 </head>
 
-<body>
-    <!-- Container utama ukuran 412x917 (mobile) -->
-    <div class="app-container">
+<body class="page-masuk">
 
-        <!-- Bagian Header (Warna latar belakang hijau tua #0F6E56) -->
-        <header class="header-section">
-            <div class="header-top">
-                <div class="greeting">
-                    <!-- Teks ucapan selamat pagi -->
-                    <p class="text-body-large font-regular">Selamat pagi,</p>
-                    <!-- Nama Pengguna -->
-                    <h1 class="text-h2 font-bold">Alif Ba Ta!</h1>
-                </div>
-                <!-- Ikon Pengaturan (Gear) -->
-                <a href="pages/masuk.html" class="settings-icon">
-                    <i class="fa-solid fa-gear"></i>
-                </a>
-            </div>
+  <!-- Hiasan gelembung hijau -->
+  <div class="blob blob-tr-1"></div>
+  <div class="blob blob-bl-1"></div>
+  <div class="blob blob-bl-2"></div>
 
-            <!-- Kartu Saldo (Card) di dalam header -->
-            <div class="balance-card">
-                <div class="balance-info">
-                    <p class="text-caption font-semibold">Total saldo TrashBack</p>
-                    <div class="balance-amount-row">
-                        <!-- Jumlah saldo -->
-                        <h2 class="text-h1 font-bold">Rp. 50.000</h2>
-                        <!-- Ikon mata untuk melihat/menyembunyikan saldo -->
-                        <i class="fa-solid fa-eye"></i>
-                    </div>
-                    <!-- Keterangan tambahan saldo hari ini -->
-                    <p class="daily-increase text-caption font-regular"><strong class="font-bold">+Rp. 5000</strong>
-                        hari ini</p>
-                </div>
+  <div class="card">
+    <h1 class="title">Masuk</h1>
+    <p class="subtitle">Pastikan kamu sudah pernah<br />membuat akun Trashback</p>
 
-                <!-- Tombol aksi pada kartu saldo -->
-                <div class="card-actions">
-                    <button class="btn-outline text-caption font-semibold">Tarik Saldo</button>
-                    <button class="btn-outline text-caption font-semibold">Riwayat</button>
-                </div>
-            </div>
-        </header>
+    <form id="masukForm" novalidate>
+      <div class="input-group">
+        <span class="input-label">Email:</span>
+        <input type="email" id="email" name="email" placeholder="contoh@gmail.com" autocomplete="email" required />
+      </div>
 
-        <!-- Bagian Konten Utama (Warna latar putih #FFFFFF) -->
-        <main class="main-content index-main">
+      <div class="input-group">
+        <span class="input-label">Password:</span>
+        <input type="password" id="password" name="password" placeholder="••••••••••••" autocomplete="current-password"
+          required />
+      </div>
 
-            <!-- Bagian Aksi Cepat -->
-            <section class="quick-action">
-                <!-- Judul bagian dengan garis bawah -->
-                <h3 class="text-h4 font-bold">Aksi cepat</h3>
-                <!-- Banner aksi cepat dengan gambar/gradien latar belakang -->
-                <div class="banner">
-                    <!-- Gambar mesin sampah -->
-                    <img src="assets/img/mesin-sampah.jpeg" alt="Mesin TrashBack" class="banner-machine-image">
-                    <div class="banner-content">
-                        <div class="banner-text">
-                            <p class="text-caption font-bold">Lihat Karya Kami</p>
-                            <!-- Tombol dengan warna hijau lain #1A772A -->
-                            <button class="btn-action-green text-caption font-semibold">Ayo!</button>
-                        </div>
-                    </div>
-                </div>
-            </section>
+      <p class="error-msg" id="errorMsg"></p>
 
-            <!-- Bagian Riwayat Terbaru -->
-            <section class="recent-history">
-                <!-- Judul bagian dengan garis bawah -->
-                <h3 class="text-h4 font-bold">Riwayat terbaru</h3>
+      <button type="submit" class="btn-primary">Masuk</button>
+    </form>
 
-                <div class="history-list">
-                    <!-- Item Riwayat 5 (Pemasukan) -->
-                    <div class="history-item">
-                        <!-- Ikon riwayat dengan latar hijau muda transparan -->
-                        <div class="history-icon bg-light-green">
-                            <i class="fa-solid fa-bottle-water" style="color: #0F6E56;"></i>
-                        </div>
-                        <div class="history-details">
-                            <h4 class="text-body-medium font-semibold">Botol Plastik - 2 buah</h4>
-                            <p class="text-caption font-regular">Hari ini, 08:45 • Mesin A</p>
-                        </div>
-                        <!-- Teks nominal positif -->
-                        <div class="history-amount text-green text-body-medium font-bold">
-                            +Rp. 5.000
-                        </div>
-                    </div>
+    <p class="switch-auth">
+      Tidak punya akun?&nbsp;
+      <a href="pages/daftar.html" class="link-accent">Yuk daftar!</a>
+    </p>
+  </div>
 
-                    <!-- Item Riwayat 1 (Pengeluaran) -->
-                    <div class="history-item">
-                        <!-- Ikon riwayat dengan latar merah muda transparan -->
-                        <div class="history-icon bg-light-red">
-                            <i class="fa-solid fa-money-bill-transfer" style="color: #FF3B30;"></i>
-                        </div>
-                        <div class="history-details">
-                            <h4 class="text-body-medium font-semibold">Tarik Saldo via Dana</h4>
-                            <p class="text-caption font-regular">Hari ini, 08:10 • Berhasil</p>
-                        </div>
-                        <!-- Teks nominal negatif (merah #FF3B30) -->
-                        <div class="history-amount text-red text-body-medium font-bold">
-                            -Rp. 10.000
-                        </div>
-                    </div>
-
-                    <!-- Item Riwayat 4 (Pemasukan) -->
-                    <div class="history-item">
-                        <!-- Ikon riwayat dengan latar hijau muda transparan -->
-                        <div class="history-icon bg-light-green">
-                            <i class="fa-solid fa-bottle-water" style="color: #0F6E56;"></i>
-                        </div>
-                        <div class="history-details">
-                            <h4 class="text-body-medium font-semibold">Botol Plastik - 7 buah</h4>
-                            <p class="text-caption font-regular">27-5-2026, 08:05 • Mesin A</p>
-                        </div>
-                        <!-- Teks nominal positif -->
-                        <div class="history-amount text-green text-body-medium font-bold">
-                            +Rp. 17.500
-                        </div>
-                    </div>
-
-                    <!-- Item Riwayat 3 (Pemasukan) -->
-                    <div class="history-item">
-                        <!-- Ikon riwayat dengan latar hijau muda transparan -->
-                        <div class="history-icon bg-light-green">
-                            <i class="fa-solid fa-bottle-water" style="color: #0F6E56;"></i>
-                        </div>
-                        <div class="history-details">
-                            <h4 class="text-body-medium font-semibold">Botol Plastik - 5 buah</h4>
-                            <p class="text-caption font-regular">26-5-2026, 10:15 • Mesin A</p>
-                        </div>
-                        <!-- Teks nominal positif -->
-                        <div class="history-amount text-green text-body-medium font-bold">
-                            +Rp. 12.500
-                        </div>
-                    </div>
-
-                    <!-- Item Riwayat 2 (Pemasukan) -->
-                    <div class="history-item">
-                        <!-- Ikon riwayat dengan latar hijau muda transparan -->
-                        <div class="history-icon bg-light-green">
-                            <i class="fa-solid fa-bottle-water" style="color: #0F6E56;"></i>
-                        </div>
-                        <div class="history-details">
-                            <h4 class="text-body-medium font-semibold">Botol Plastik - 6 buah</h4>
-                            <p class="text-caption font-regular">25-5-2026, 13:20 • Mesin B</p>
-                        </div>
-                        <!-- Teks nominal positif -->
-                        <div class="history-amount text-green text-body-medium font-bold">
-                            +Rp. 15.000
-                        </div>
-                    </div>
-
-                    <!-- Item Riwayat 1 (Pemasukan) -->
-                    <div class="history-item">
-                        <!-- Ikon riwayat dengan latar hijau muda transparan -->
-                        <div class="history-icon bg-light-green">
-                            <i class="fa-solid fa-bottle-water" style="color: #0F6E56;"></i>
-                        </div>
-                        <div class="history-details">
-                            <h4 class="text-body-medium font-semibold">Botol Plastik - 4 buah</h4>
-                            <p class="text-caption font-regular">24-5-2026 09:15 • Mesin A</p>
-                        </div>
-                        <!-- Teks nominal positif -->
-                        <div class="history-amount text-green text-body-medium font-bold">
-                            +Rp. 10.000
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <!-- Bagian Navigation Bar (Navbar) (Warna abu-abu #DADADA) -->
-        <nav class="bottom-nav">
-            <a href="pages/you.html" class="nav-item">
-                <i class="fa-solid fa-user"></i>
-                <span class="text-body-medium font-semibold">You</span>
-            </a>
-            <!-- Item navigasi yang aktif (Warna hijau #1D9E75) -->
-            <a href="index.html" class="nav-item active">
-                <i class="fa-solid fa-home"></i>
-                <span class="text-body-medium font-semibold">Home</span>
-            </a>
-            <a href="pages/karya.html" class="nav-item">
-                <i class="fa-solid fa-bag-shopping"></i>
-                <span class="text-body-medium font-semibold">Katalog</span>
-            </a>
-            <a href="pages/maps.html" class="nav-item">
-                <i class="fa-solid fa-map"></i>
-                <span class="text-body-medium font-semibold">Maps</span>
-            </a>
-        </nav>
-
-    </div>
+  <script src="assets/js/script.js"></script>
 </body>
 
 </html>

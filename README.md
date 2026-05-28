@@ -9,7 +9,7 @@ Trashback-Desain-Antarmuka-Pengguna/
 │
 ├── index.html
 ├── pages/
-│   ├── masuk.html
+│   ├── home.html
 │   ├── daftar.html
 │   ├── you.html
 │   ├── karya.html

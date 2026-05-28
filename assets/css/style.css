@@ -185,6 +185,39 @@ body {
     overflow-y: auto;
 }
 
+/* Specific layout for index.html */
+.index-main {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.index-main .quick-action {
+    flex-shrink: 0;
+}
+
+.index-main .recent-history {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+}
+
+.index-main .recent-history h3 {
+    flex-shrink: 0;
+}
+
+.index-main .history-list {
+    flex: 1;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.index-main .history-list::-webkit-scrollbar {
+    display: none;
+}
+
 /* Global styling untuk judul section */
 h3 {
     color: var(--color-black);
